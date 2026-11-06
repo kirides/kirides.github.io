@@ -1,0 +1,40 @@
+# Publishes ./site to GitHub Pages, but ONLY when a version tag is pushed.
+# Pushing commits to any branch does not change the live page.
+#
+#   git tag v1.0.0 && git push origin v1.0.0
+#
+# One-time setup in the repository settings (see README):
+#   1. Settings > Pages > Build and deployment > Source: "GitHub Actions"
+#   2. Settings > Environments > github-pages > Deployment branches and tags:
+#      add a tag rule "v*" (by default only the default branch may deploy).
+name: Deploy Pages (on tag)
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch: # manual re-deploy from the Actions tab (select a tag as ref)
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
