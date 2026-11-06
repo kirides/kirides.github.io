@@ -46,5 +46,5 @@ To roll back, re-run the workflow for an older tag from the Actions tab.
 
 ## Legal
 
-`site/legal.html` holds the Impressum and privacy notice (Datenschutzerklärung). Fill in the
-`[placeholders]` before the first release.
+`site/legal.html` holds a privacy notice (Datenschutzerklärung) without personal data. This is a
+private, non-commercial site without ads, so it has no Impressum; contact goes through GitHub.
