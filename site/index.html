@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kirides · Projects</title>
-  <meta name="description" content="Open-source projects by Kirides: renderers and mods for Gothic, Risen and Sacred, plus tooling for game modding and everyday development.">
+  <meta name="description" content="Open-source projects by Kirides: renderers and mods for Gothic, Risen and Sacred, plus tooling for Gothic modding.">
   <meta name="color-scheme" content="light dark">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233b6fd8'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='17' font-weight='700' fill='white' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
@@ -15,7 +15,7 @@
   <header class="site-header">
     <div class="wrap">
       <h1>Kirides</h1>
-      <p class="tagline">Renderers, mods and modding tools for games I love, plus the odd utility for everyday development.</p>
+      <p class="tagline">Renderers, mods and modding tools for Gothic, Risen and other games I love.</p>
       <p class="links">
         <a href="https://github.com/kirides">github.com/kirides</a>
       </p>
@@ -32,114 +32,115 @@
     <section class="panel" id="gaming" role="tabpanel" aria-labelledby="tab-gaming" tabindex="0">
       <h2 class="panel-title">Gaming</h2>
 
-      <h3 class="group">Renderers &amp; engine mods</h3>
+      <h3 class="game" id="gothic">Gothic</h3>
+      <h4 class="group">Renderer &amp; UI</h4>
       <ul class="cards">
         <li class="card">
-          <h4><a href="https://github.com/kirides/GD3D11">GD3D11</a></h4>
+          <h5><a href="https://github.com/kirides/GD3D11">GD3D11</a></h5>
           <p>Direct3D 11 renderer for Gothic and Gothic II: dynamic lighting and shadows, volumetric water, HDR, FSR and much more.</p>
           <ul class="tags"><li>C++</li><li>Gothic</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/rvk">rvk</a></h4>
-          <p>Vulkan renderer for Risen (Enhanced Edition) with better water, shadows, optional ray-traced lighting and FSR upscaling.</p>
-          <ul class="tags"><li>C++</li><li>Risen</li></ul>
-        </li>
-        <li class="card">
-          <h4><a href="https://github.com/kirides/risen-spass">risen-spass</a></h4>
-          <p>Modding layer and visual mod editor for Risen Enhanced: new quests, dialogues, NPCs and items, or script mods in Lua.</p>
-          <ul class="tags"><li>C++</li><li>Lua</li><li>Risen</li></ul>
-        </li>
-        <li class="card">
-          <h4><a href="https://github.com/kirides/sacred-bild">sacred-bild</a></h4>
-          <p>Render and gameplay fixes for Sacred Gold: any resolution with a scaled UI, Direct3D 9 instead of DirectDraw, and LAN play fixes.</p>
-          <ul class="tags"><li>C++</li><li>Sacred</li></ul>
-        </li>
-        <li class="card">
-          <h4><a href="https://github.com/kirides/OpenWbc3">OpenWbc3</a></h4>
-          <p>Open-source re-implementation of the Warlords Battlecry III engine on LÖVE, using the data files of your own copy.</p>
-          <ul class="tags"><li>Lua</li><li>LÖVE</li></ul>
-        </li>
-        <li class="card">
-          <h4><a href="https://github.com/kirides/ImGui-daedalus">ImGui-daedalus</a></h4>
+          <h5><a href="https://github.com/kirides/ImGui-daedalus">ImGui-daedalus</a></h5>
           <p>Ikarus-based Daedalus bindings for Dear ImGui, so Gothic script mods can draw UI through GD3D11.</p>
           <ul class="tags"><li>Daedalus</li><li>Gothic</li></ul>
         </li>
       </ul>
-
-      <h3 class="group">Gothic patches &amp; plugins</h3>
+      <h4 class="group">Patches (Ninja)</h4>
       <ul class="cards">
         <li class="card">
-          <h4><a href="https://github.com/kirides/ninja-quickloot">ninja-quickloot</a></h4>
+          <h5><a href="https://github.com/kirides/ninja-quickloot">ninja-quickloot</a></h5>
           <p>Ninja patch for Gothic II: Night of the Raven that adds quick-looting with the right mouse button.</p>
           <ul class="tags"><li>Daedalus</li><li>Ninja</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/ninja-manareg">ninja-manareg</a></h4>
+          <h5><a href="https://github.com/kirides/ninja-manareg">ninja-manareg</a></h5>
           <p>Mana regeneration for Gothic II, built on Ninja v2.</p>
           <ul class="tags"><li>Daedalus</li><li>Ninja</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/ninja-lifereg">ninja-lifereg</a></h4>
+          <h5><a href="https://github.com/kirides/ninja-lifereg">ninja-lifereg</a></h5>
           <p>Health regeneration for Gothic and Gothic II, built on Ninja.</p>
           <ul class="tags"><li>Daedalus</li><li>Ninja</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/ninja-quicksaveslots">ninja-quicksaveslots</a></h4>
+          <h5><a href="https://github.com/kirides/ninja-quicksaveslots">ninja-quicksaveslots</a></h5>
           <p>Lets quicksave in Gothic and Gothic II write to specific save slots.</p>
           <ul class="tags"><li>Daedalus</li><li>Ninja</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/ninja-picklockhelper">ninja-picklockhelper</a></h4>
+          <h5><a href="https://github.com/kirides/ninja-picklockhelper">ninja-picklockhelper</a></h5>
           <p>Shows your successful lockpick attempts in Gothic and Gothic II.</p>
           <ul class="tags"><li>Daedalus</li><li>Ninja</li></ul>
         </li>
+      </ul>
+      <h4 class="group">Plugins (Union)</h4>
+      <ul class="cards">
         <li class="card">
-          <h4><a href="https://github.com/kirides/union-plugin">union-plugin</a></h4>
+          <h5><a href="https://github.com/kirides/union-plugin">union-plugin</a></h5>
           <p>Personal Union plugin for Gothic and Gothic II (NotR), built for multiple game versions with Union 1.0h.</p>
           <ul class="tags"><li>C++</li><li>Union</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/union-manareg">union-manareg</a></h4>
+          <h5><a href="https://github.com/kirides/union-manareg">union-manareg</a></h5>
           <p>Union plugin for mana regeneration in Gothic and Gothic II, the Union counterpart of ninja-manareg.</p>
           <ul class="tags"><li>C++</li><li>Union</li></ul>
         </li>
       </ul>
-
-      <h3 class="group">Twitch integration</h3>
+      <h4 class="group">Twitch integration</h4>
       <ul class="cards">
         <li class="card">
-          <h4><a href="https://github.com/kirides/twitch-integration">twitch-integration</a></h4>
+          <h5><a href="https://github.com/kirides/twitch-integration">twitch-integration</a></h5>
           <p>Connector app and native DLL that let Twitch chat, channel points and StreamElements perks trigger events in games.</p>
           <ul class="tags"><li>Go</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/gothic-twitch-integration">gothic-twitch-integration</a></h4>
+          <h5><a href="https://github.com/kirides/gothic-twitch-integration">gothic-twitch-integration</a></h5>
           <p>The Gothic and Gothic II (NotR) side of twitch-integration.</p>
           <ul class="tags"><li>Daedalus</li><li>Gothic</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/gothic-twitch-actions">gothic-twitch-actions</a></h4>
+          <h5><a href="https://github.com/kirides/gothic-twitch-actions">gothic-twitch-actions</a></h5>
           <p>Ready-made viewer actions for the Gothic Twitch integration.</p>
           <ul class="tags"><li>Daedalus</li><li>Gothic</li></ul>
         </li>
+      </ul>
+
+      <h3 class="game" id="risen">Risen</h3>
+      <ul class="cards">
         <li class="card">
-          <h4><a href="https://github.com/kirides/risen-twitch">risen-twitch</a></h4>
+          <h5><a href="https://github.com/kirides/rvk">rvk</a></h5>
+          <p>Vulkan renderer for Risen (Enhanced Edition) with better water, shadows, optional ray-traced lighting and FSR upscaling.</p>
+          <ul class="tags"><li>C++</li><li>Risen</li></ul>
+        </li>
+        <li class="card">
+          <h5><a href="https://github.com/kirides/risen-spass">risen-spass</a></h5>
+          <p>Modding layer and visual mod editor for Risen Enhanced: new quests, dialogues, NPCs and items, or script mods in Lua.</p>
+          <ul class="tags"><li>C++</li><li>Lua</li><li>Risen</li></ul>
+        </li>
+        <li class="card">
+          <h5><a href="https://github.com/kirides/risen-twitch">risen-twitch</a></h5>
           <p>Lets Twitch viewers spawn monsters, change the weather and more in Risen Enhanced, built on risen-spass.</p>
           <ul class="tags"><li>Lua</li><li>Risen</li></ul>
         </li>
       </ul>
 
-      <h3 class="group">Other games</h3>
+      <h3 class="game" id="other">Other</h3>
       <ul class="cards">
         <li class="card">
-          <h4><a href="https://github.com/kirides/digital-world-patcher">digital-world-patcher</a></h4>
-          <p>German fan translation and digivolution editor for Digimon World DS, Dawn and Dusk, <a class="inline" href="https://kirides.github.io/digital-world-patcher/">patched right in your browser</a>.</p>
+          <h5><a href="https://github.com/kirides/digital-world-patcher">digital-world-patcher</a></h5>
+          <p>German fan translation and digivolution editor for Digimon World DS, Dawn and Dusk (Nintendo DS), <a class="inline" href="https://kirides.github.io/digital-world-patcher/">patched right in your browser</a>.</p>
           <ul class="tags"><li>Python</li><li>Web</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/FlyffUniverseLauncher">FlyffUniverseLauncher</a></h4>
-          <p>Launcher for Flyff Universe with one profile per character and a fullscreen mode that survives pressing Esc.</p>
-          <ul class="tags"><li>C#</li></ul>
+          <h5><a href="https://github.com/kirides/OpenWbc3">OpenWbc3</a></h5>
+          <p>Open-source re-implementation of the Warlords Battlecry III engine on LÖVE, using the data files of your own copy.</p>
+          <ul class="tags"><li>Lua</li><li>LÖVE</li></ul>
+        </li>
+        <li class="card">
+          <h5><a href="https://github.com/kirides/sacred-bild">sacred-bild</a></h5>
+          <p>Render and gameplay fixes for Sacred Gold: any resolution with a scaled UI, Direct3D 9 instead of DirectDraw, and LAN play fixes.</p>
+          <ul class="tags"><li>C++</li><li>Sacred</li></ul>
         </li>
       </ul>
     </section>
@@ -148,25 +149,25 @@
     <section class="panel" id="tooling" role="tabpanel" aria-labelledby="tab-tooling" tabindex="0">
       <h2 class="panel-title">Tooling</h2>
 
-      <h3 class="group">Gothic &amp; Daedalus modding tools</h3>
+      <h4 class="group">Gothic &amp; Daedalus modding tools</h4>
       <ul class="cards">
         <li class="card">
-          <h4><a href="https://github.com/kirides/DaedalusLanguageServer">DaedalusLanguageServer</a></h4>
+          <h5><a href="https://github.com/kirides/DaedalusLanguageServer">DaedalusLanguageServer</a></h5>
           <p>Language server for Daedalus, the scripting language of Gothic: completion, go-to-definition, diagnostics and more.</p>
           <ul class="tags"><li>Go</li><li>LSP</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/vscode-daedalus">vscode-daedalus</a></h4>
+          <h5><a href="https://github.com/kirides/vscode-daedalus">vscode-daedalus</a></h5>
           <p>Visual Studio Code extension for Daedalus, powered by DaedalusLanguageServer.</p>
           <ul class="tags"><li>TypeScript</li><li>VS Code</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/vdfsbuilder">vdfsbuilder</a></h4>
+          <h5><a href="https://github.com/kirides/vdfsbuilder">vdfsbuilder</a></h5>
           <p>Go package, CLI and GitHub Action to pack VDF/MOD volumes for Gothic from a .vm file.</p>
           <ul class="tags"><li>Go</li><li>GitHub Action</li></ul>
         </li>
         <li class="card">
-          <h4><a href="https://github.com/kirides/daedalus2bbcode">daedalus2bbcode</a></h4>
+          <h5><a href="https://github.com/kirides/daedalus2bbcode">daedalus2bbcode</a></h5>
           <p>Small web page that highlights Daedalus code and copies it as BBCode for forum posts.</p>
           <ul class="tags"><li>HTML</li></ul>
         </li>
