@@ -10,6 +10,12 @@
   --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 1px 3px rgb(16 24 40 / 8%);
   --shadow-hover: 0 6px 18px rgb(16 24 40 / 12%);
   --radius: 12px;
+  --gothic: #b45309;
+  --risen: #0e7490;
+  --other: #7c3aed;
+  --tooling: #15803d;
+  --hero-a: #dbe6ff;
+  --hero-b: #f3e3ff;
   color-scheme: light;
 }
 
@@ -25,6 +31,12 @@
     --tag-bg: #222832;
     --shadow: 0 1px 2px rgb(0 0 0 / 40%);
     --shadow-hover: 0 6px 18px rgb(0 0 0 / 50%);
+    --gothic: #f5a524;
+    --risen: #2dd4bf;
+    --other: #b197fc;
+    --tooling: #4ade80;
+    --hero-a: #16213d;
+    --hero-b: #2a1a3d;
     color-scheme: dark;
   }
 }
@@ -67,10 +79,19 @@ a { color: var(--accent); }
 
 /* Header */
 .site-header {
-  padding: 48px 0 24px;
+  padding: 48px 0 32px;
+  margin-bottom: 8px;
+  background:
+    radial-gradient(60rem 20rem at 0% 0%, var(--hero-a), transparent 70%),
+    radial-gradient(50rem 20rem at 100% 0%, var(--hero-b), transparent 70%);
 }
 .site-header h1 {
   margin: 0 0 6px;
+  background: linear-gradient(90deg, var(--accent), var(--other));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
   font-size: clamp(2rem, 5vw, 2.75rem);
   letter-spacing: -0.02em;
 }
@@ -135,6 +156,23 @@ a { color: var(--accent); }
   letter-spacing: -0.01em;
 }
 .game + .cards { margin-top: 12px; }
+.game::before {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin-right: 0.45em;
+  border-radius: 3px;
+  background: var(--c, var(--accent));
+  vertical-align: 0.1em;
+}
+
+/* Per-group accent colours */
+.theme-gothic  { --c: var(--gothic); }
+.theme-risen   { --c: var(--risen); }
+.theme-other   { --c: var(--other); }
+.theme-tooling { --c: var(--tooling); }
+.group[class*="theme-"] { color: var(--c); }
 
 .group {
   margin: 20px 0 12px;
@@ -163,6 +201,8 @@ a { color: var(--accent); }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  border-top: 4px solid var(--c, var(--accent));
+  background-image: linear-gradient(180deg, color-mix(in srgb, var(--c, var(--accent)) 7%, transparent), transparent 60%);
   box-shadow: var(--shadow);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
@@ -170,7 +210,7 @@ a { color: var(--accent); }
 .card:focus-within {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
-  border-color: var(--accent);
+  border-color: var(--c, var(--accent));
 }
 
 .card h5 {
@@ -191,10 +231,10 @@ a { color: var(--accent); }
 }
 .card h5 a:focus-visible { outline: none; }
 .card h5 a:focus-visible::after {
-  outline: 3px solid var(--accent);
+  outline: 3px solid var(--c, var(--accent));
   outline-offset: 2px;
 }
-.card:hover h5 a { color: var(--accent); }
+.card:hover h5 a { color: var(--c, var(--accent)); }
 
 .card p {
   margin: 0 0 14px;
@@ -220,6 +260,10 @@ a { color: var(--accent); }
   border-radius: 999px;
   background: var(--tag-bg);
   color: var(--muted);
+}
+.tags li:first-child {
+  background: color-mix(in srgb, var(--c, var(--accent)) 16%, transparent);
+  color: color-mix(in srgb, var(--c, var(--accent)) 80%, var(--text));
 }
 
 /* Footer */
