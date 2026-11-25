@@ -12,6 +12,7 @@
   --radius: 12px;
   --gothic: #b45309;
   --risen: #0e7490;
+  --sacred: #b91c1c;
   --other: #7c3aed;
   --tooling: #15803d;
   --hero-a: #dbe6ff;
@@ -33,6 +34,7 @@
     --shadow-hover: 0 6px 18px rgb(0 0 0 / 50%);
     --gothic: #f5a524;
     --risen: #2dd4bf;
+    --sacred: #f87171;
     --other: #b197fc;
     --tooling: #4ade80;
     --hero-a: #16213d;
@@ -170,6 +172,7 @@ a { color: var(--accent); }
 /* Per-group accent colours */
 .theme-gothic  { --c: var(--gothic); }
 .theme-risen   { --c: var(--risen); }
+.theme-sacred  { --c: var(--sacred); }
 .theme-other   { --c: var(--other); }
 .theme-tooling { --c: var(--tooling); }
 .group[class*="theme-"] { color: var(--c); }
